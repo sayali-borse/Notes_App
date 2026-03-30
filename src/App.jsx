@@ -1,10 +1,15 @@
-import { BrowserRouter, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Paste from "./components/Paste";
 import View from "./components/View";
 
-const router = BrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: (
@@ -37,7 +42,9 @@ const router = BrowserRouter([
 function App() {
   return (
     <>
-      <h1 className="text-xl"> Hello</h1>
+      <div>
+        <RouterProvider router={router} />
+      </div>
     </>
   );
 }
