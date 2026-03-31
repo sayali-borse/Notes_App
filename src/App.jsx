@@ -1,9 +1,4 @@
-import {
-  BrowserRouter,
-  createBrowserRouter,
-  Route,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Paste from "./components/Paste";
@@ -29,7 +24,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/paste/:id",
+    path: "/pastes/:id",
     element: (
       <div>
         <Navbar />
